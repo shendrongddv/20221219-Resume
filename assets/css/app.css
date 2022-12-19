@@ -1,0 +1,121 @@
+/* Fonts */
+@import url(../fonts/barlow-semi-condensed/barlow-semi-condensed.css);
+@import url(../fonts/playfair-display/playfair-display.css);
+
+/* Variables */
+:root {
+  --ff-body: "Barlow Semi Condensed", sans-serif;
+  --ff-heading: "Playfair Display", sans-serif;
+  --color-base: #f6f8fa;
+  --color-text: #758398;
+  --color-accent: #009bdf;
+  --transition: 0.5s all ease;
+}
+
+/* Reset */
+body {
+  background-color: var(--color-base);
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 1.5rem !important;
+}
+
+/* Utility */
+.axi-line {
+  height: 1px;
+  width: 3rem;
+  background-color: var(--color-text);
+}
+
+.axi-text-icon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Navbar */
+.navbar-toggler {
+  padding: 0.25rem;
+}
+
+.btn-close {
+  padding: 0.75rem !important;
+  background-color: transparent;
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+}
+
+.btn-close:focus,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-brand {
+  height: 2.5rem;
+}
+
+.nav-link {
+  color: black;
+  text-transform: uppercase;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+@media (max-width: 767.98px) {
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--color-accent) !important;
+  }
+}
+
+/* Hero */
+#hero {
+  padding: 7rem 0 4rem 0;
+  background: linear-gradient(
+      120deg,
+      rgb(246, 248, 250),
+      rgba(246, 248, 250, 0.85)
+    ),
+    url(../images/AnimatedShape.svg) no-repeat right;
+  background-size: cover;
+}
+
+#hero h1,
+#hero h2 {
+  font-family: var(--ff-heading);
+}
+
+@media (max-width: 767.98px) {
+  #hero img {
+    width: 60%;
+    margin-bottom: -1.5rem;
+  }
+}
